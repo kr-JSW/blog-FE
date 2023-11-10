@@ -1,0 +1,15 @@
+.codeBtn {
+  background-color: rgb(240, 235, 235);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px white, 0 0 25px white;
+  transition: all 0.5s;
+  font-weight: 600;
+}
+
+.codeBtn:hover {
+  box-shadow: 0 0 5px white, 0 0 25px white, 0 0 50px white;
+}

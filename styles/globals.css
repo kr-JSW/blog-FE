@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "강부장님체";
+  src: url("../font/강부장님체.ttf");
+}
+
+@font-face {
+  font-family: "마고체";
+  src: url("../font/마고체.ttf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
