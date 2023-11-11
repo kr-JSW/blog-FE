@@ -78,12 +78,11 @@ function Category({ postDataNum, postData, page, index }) {
 export default Category;
 
 export async function getServerSideProps(context) {
-    console.log('하나');
     const { index, page } = context.query;
 
     let postDataNum;
     let postData;
-    console.log('둘');
+
     await axios
         .get(`${process.env.NEXT_PUBLIC_BACK_URL}/posts/getPost`, {
             params: { categories: index },
@@ -95,7 +94,7 @@ export async function getServerSideProps(context) {
             postData = res.data;
             postDataNum = res.data.length;
         });
-    console.log('셋');
+
     return {
         props: {
             postDataNum,
