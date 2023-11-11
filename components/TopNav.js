@@ -60,6 +60,11 @@ function TopNav() {
             .then((res) => setCategories(res.data.answer));
     }, [newCategory]);
 
+    function checkUrl(photoName) {
+        let expUrl = /^http[s]?:\/\/([\S]{3,})/i;
+        return expUrl.test(photoName);
+    }
+
     return (
         <div className="sticky top-0 h-[50px] bg-gradient-to-r from-indigo-950 to-purple-400  flex items-center justify-evenly px-[10px] z-40">
             <h1 className="font-semibold italic flex-1  flex justify-center select-none bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
@@ -136,11 +141,15 @@ function TopNav() {
                     <IoExitOutline onClick={() => setCate(!cate)} className="text-[30px] cursor-pointer" />
                     <div className="flex flex-wrap  h-[100%] items-center justify-between px-[20px] overflow-auto gap-y-[40px]">
                         {categories.map((i, idx) => {
-                            const { name, photo } = i;
+                            let { name, photo } = i;
+
+                            photo = checkUrl(photo) ? photo : process.env.NEXT_PUBLIC_BACK_IMAGE + '/' + photo;
                             return (
                                 <span
                                     key={idx}
-                                    style={{ backgroundImage: `url(${photo})` }}
+                                    style={{
+                                        backgroundImage: `url(${photo})`,
+                                    }}
                                     className={`w-[40%] h-[30%] hover:translate-y-[-5px] transition overflow-hidden cursor-pointer rounded-lg  flex items-center justify-center bg-cover `}
                                 >
                                     <Link

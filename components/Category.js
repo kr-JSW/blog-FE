@@ -33,12 +33,12 @@ function Category() {
         }
     };
 
-    const clickHandler = () => {
+    const clickHandler = async () => {
         //imgIsUrl은 categoryImg이 url양식일때 true, file일때 false로 표현된다.
         //이렇게 하는 이유는 file을 업로드할때 서버에 저장해야하기 때문이다.
 
         if (imgIsUrl) {
-            axios
+            await axios
                 .post(`${process.env.NEXT_PUBLIC_BACK_URL}/categories/createCategory`, {
                     name: categoryName,
                     photo: categoryImg,
@@ -50,8 +50,8 @@ function Category() {
             imgData.append('name', filename);
             imgData.append('file', categoryImg);
 
-            axios.post(`${process.env.NEXT_PUBLIC_BACK_URL}/upload`, imgData).then((res) => toast(res.data));
-            axios
+            await axios.post(`${process.env.NEXT_PUBLIC_BACK_URL}/upload`, imgData).then((res) => toast(res.data));
+            await axios
                 .post(`${process.env.NEXT_PUBLIC_BACK_URL}/categories/createCategory`, {
                     name: categoryName,
                     photo: filename,
