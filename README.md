@@ -1,8 +1,7 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## 블로그
 
-## Getting Started
+### 가입 코드를 통해 가입이 가능한 공유형 블로그.
 
-First, run the development server:
 
 ```bash
 npm run dev
