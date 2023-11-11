@@ -4,7 +4,7 @@ import axios from 'axios';
 import router from 'next/router';
 import { signStore } from '../store';
 
-function write() {
+function Write() {
     const [category, setCategory] = useState('JavaScript');
     const [title, setTitle] = useState('');
     const [desc, setDesc] = useState('');
@@ -121,4 +121,4 @@ function write() {
     );
 }
 
-export default write;
+export default Write;

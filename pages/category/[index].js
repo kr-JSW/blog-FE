@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import axios from 'axios';
 import Pagination from '../../components/Pagination';
 
-function category({ postDataNum, postData, page, index }) {
+function Category({ postDataNum, postData, page, index }) {
     const router = useRouter();
 
     page = parseInt(page);
@@ -51,7 +51,10 @@ function category({ postDataNum, postData, page, index }) {
                                         <div>
                                             {desc.split('<<div>>').map((i, idx) => {
                                                 return (
-                                                    <div className="text-ellipsis overflow-hidden whitespace-pre">
+                                                    <div
+                                                        key={idx}
+                                                        className="text-ellipsis overflow-hidden whitespace-pre"
+                                                    >
                                                         {i}
                                                     </div>
                                                 );
@@ -72,7 +75,7 @@ function category({ postDataNum, postData, page, index }) {
     );
 }
 
-export default category;
+export default Category;
 
 export async function getServerSideProps(context) {
     const { index, page } = context.query;
