@@ -8,11 +8,11 @@ function Category({ postDataNum, postData, page, index }) {
 
     page = parseInt(page);
 
-    const [pageNum, setPageNum] = useState(page);
+    // const [pageNum, setPageNum] = useState(page);
 
-    useEffect(() => {
-        setPageNum(page);
-    }, [router.isReady]);
+    // useEffect(() => {
+    //     setPageNum(page);
+    // }, [router.isReady]);
 
     return (
         <div className=" min-h-[calc(100vh-50px)] pt-[50px]">
@@ -78,7 +78,7 @@ function Category({ postDataNum, postData, page, index }) {
 export default Category;
 
 export async function getServerSideProps(context) {
-    const { index, page } = context.query;
+    //  const { index, page } = context.query;
 
     // let postDataNum;
     // let postData;
@@ -94,48 +94,6 @@ export async function getServerSideProps(context) {
     //         postData = res.data;
     //         postDataNum = res.data.length;
     //     });
-
-    let postDataNum = 2;
-
-    let postData = [
-        {
-            title: 'ㅇㅇㅇ',
-            desc: 'ㅅㄷㄴㅅ',
-            photo: 'https://cdn.pixabay.com/photo/2023/05/18/20/48/swamp-8003229_640.png',
-            createdAt: '2023-11-11T12:06:42.468Z',
-            _id: '654f6e5219739ce6fc14fd53',
-        },
-        {
-            title: 'split함수',
-            desc:
-                'split는 문자열의 특정 문자를 기준으로하여 배열을 생성하는 함수다.\n' +
-                '\n' +
-                '<<div>>\n' +
-                "  let str = 'ABCDATAWH'\n" +
-                '\n' +
-                "  str = str.split('A')\n" +
-                '\n' +
-                '  console.log("str : ",str)\n' +
-                '<<div>>\n' +
-                '\n' +
-                '이렇게 콘솔을 찍으면,\n' +
-                '\n' +
-                '<<div>>\n' +
-                "  str : ['','BCD', 'T', 'WH']\n" +
-                '<<div>>\n' +
-                '\n' +
-                '이런 배열이 출력된다.\n' +
-                '\n' +
-                'A라는 문자를 기준으로 배열을 만들었기 때문에, A가 사라지고 배열이 만들어진다.\n' +
-                '\n' +
-                '이렇게 배열로 리턴되기 때문에, map함수와 궁합이 좋다.',
-            photo: 'https://cdn.pixabay.com/photo/2023/09/12/18/33/jackdaw-8249384_640.jpg',
-            createdAt: '2023-10-31T06:53:21.638Z',
-            _id: '6540a461b4103e280b5c0431',
-        },
-    ];
-
-    console.log(postDataNum, postData);
 
     return {
         props: {
