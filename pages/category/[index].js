@@ -38,7 +38,7 @@ function Category({ postDataNum, postData, page, index }) {
                                     <span className="block truncate ">{title}</span>
                                 </div>
                                 <div
-                                    className={` h-[80%] flex p-5 bg-cover`}
+                                    className={` h-[80%] flex p-5 bg-cover flex-col`}
                                     style={{
                                         backgroundImage: urlBoolean
                                             ? `url(${photo})`
@@ -47,7 +47,7 @@ function Category({ postDataNum, postData, page, index }) {
                     )`,
                                     }}
                                 >
-                                    <div className="bg-slate-200/25   w-[100%] rounded-[10px] flex flex-col justify-between ">
+                                    <div className="bg-slate-200/25 overflow-hidden  w-[100%] rounded-[10px] flex flex-col justify-between ">
                                         <div>
                                             {desc.split('<<div>>').map((i, idx) => {
                                                 return (
@@ -60,7 +60,9 @@ function Category({ postDataNum, postData, page, index }) {
                                                 );
                                             })}
                                         </div>
-                                        <div className="font-bold">{createdAt.slice(0, 10)}</div>
+                                    </div>
+                                    <div className="font-bold backdrop-blur-md rounded-[10px] flex items-center justify-center mt-[10px]">
+                                        {createdAt.slice(0, 10)}
                                     </div>
                                 </div>
                             </li>
