@@ -1,22 +1,21 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## 블로그
 
-## Getting Started
 
-First, run the development server:
+### 가입 코드를 통해 가입이 가능한 공유형 블로그.
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+>세부기능
+- 가입시 코드가 필요합니다.
+- 게시글 썸네일, 프리뷰, CRUD, 코드양식 생성이 가능합니다.
+- 마이 페이지(관리자 추가 기능),카테고리 생성, 유저관리(등급 조정 및 탈퇴), 가입 코드 관리(생성, 삭제, 복사), 유저 프로필 사진 업데이트(이미지url 혹은 file), 등급 확인, 패스워드 변경
+- EmailJs를 이용하여, 필요시 개발자와 연락이 가능합니다.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+
+
+
 
 ## Learn More
 
