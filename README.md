@@ -1,4 +1,4 @@
-## 블로그
+## 블로그 - FE
 
 ![Coding Archive-logo](https://github.com/kr-JSW/blog-FE/assets/150055151/32bf2710-7af3-4efc-a184-90100e3bf5f9)
 
